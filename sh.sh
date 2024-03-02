@@ -1,3 +1,11 @@
+#
+cp -r /root/.config/nvim/* /home/tn/my-vim-config/nvim/
+cp -r /root/.config/lvim/* /home/tn/my-vim-config/lvim/
+
+#
+#cp -r lvim /root/.config/lvim
+#cp -r nvim /root/.config/nvim
+
 # install python and pip
 #apt-get install software-properties-common
 #add-apt-repository ppa:deadsnakes/ppa
