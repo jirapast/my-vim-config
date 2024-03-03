@@ -1,6 +1,9 @@
 #
-cp -r /root/.config/nvim/* /home/tn/my-vim-config/nvim/
-cp -r /root/.config/lvim/* /home/tn/my-vim-config/lvim/
+#mkdir nvim
+cp -r /root/.config/nvim/* /root/tn/personal/my-vim-config/nvim/
+
+#mkdir lvim
+#cp -r /root/.config/lvim/* /root/tn/my-vim-config/lvim/
 
 #
 #cp -r lvim /root/.config/lvim
@@ -29,4 +32,4 @@ cp -r /root/.config/lvim/* /home/tn/my-vim-config/lvim/
 #sudo install lazygit /usr/local/bin
 
 # install LunarVim
-LV_BRANCH='release-1.3/neovim-0.9' bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.3/neovim-0.9/utils/installer/install.sh)
+# LV_BRANCH='release-1.3/neovim-0.9' bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.3/neovim-0.9/utils/installer/install.sh)

@@ -144,7 +144,10 @@ end, {})
 ----- remap key: using r, R rather than using x, X -----
 vim.api.nvim_set_keymap('n', 'r', 'x', { noremap = true })
 vim.api.nvim_set_keymap('n', 'R', 'X', { noremap = true })
-vim.api.nvim_set_keymap('n', 'b', 'V', { noremap = true })
 
+-- Remap right Shift to exit insert mode
+-- vim.api.nvim_set_keymap('i', '<>', '<Esc>', {noremap = true})
+-- vim.api.nvim_set_keymap('n', 'b', 'V', { noremap = true })
+-- vim.api.nvim_set_keymap('i', '<CapsLock>', '<Esc>', { noremap = true })
 -- vim.o.mouse = "a"
 --------------------------------------------------------

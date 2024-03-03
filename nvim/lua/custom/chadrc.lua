@@ -2,7 +2,7 @@
 local M = {}
 
 M.ui = {
-  thrme = 'melange',
+  threme = 'melange',
 
   statusline = {
     enabled = true,
