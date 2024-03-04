@@ -1,3 +1,5 @@
+#https://calebschoepp.com/blog/2021/how-to-setup-oh-my-posh-on-ubuntu/
+
 #
 #mkdir nvim
 cp -r /root/.config/nvim/* /root/tn/personal/my-vim-config/nvim/
