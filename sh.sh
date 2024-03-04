@@ -1,4 +1,5 @@
 #https://calebschoepp.com/blog/2021/how-to-setup-oh-my-posh-on-ubuntu/
+# eval "$(oh-my-posh --init --shell bash --config ~/.poshthemes/mt.omp.json)"
 
 #
 #mkdir nvim
