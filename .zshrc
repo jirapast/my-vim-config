@@ -110,6 +110,8 @@ source $ZSH/oh-my-zsh.sh
 #
 ####################################################
 
+export PATH="/home/tn/bin:$PATH"
+
 eval "$(oh-my-posh init zsh --config ~/themes/star.omp.json)"
 
 alias vim=nvim
