@@ -109,10 +109,27 @@ source $ZSH/oh-my-zsh.sh
 #
 #
 ####################################################
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export PATH="/home/tn/bin:$PATH"
+oh-my-posh get shell
 
-eval "$(oh-my-posh init zsh --config ~/themes/star.omp.json)"
+export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
+#export ZSH_THEME=robbyrussell
 
-alias vim=nvim
-alias python=python3
+eval "$(oh-my-posh init zsh --config themes/star.omp.json)"
+
+cd $HOME
+
+echo $EDITOR
+echo $SHELL
+echo $PWD
+
+
+
+
+
+#alias vim=nvim
+#alias python=python3
