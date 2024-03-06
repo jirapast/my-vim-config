@@ -1,6 +1,8 @@
 #https://calebschoepp.com/blog/2021/how-to-setup-oh-my-posh-on-ubuntu/
 # eval "$(oh-my-posh --init --shell bash --config ~/.poshthemes/mt.omp.json)"
 
+install vim-plug
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 #
 #mkdir nvim
 cp -r /root/.config/nvim/* /root/tn/personal/my-vim-config/nvim/
