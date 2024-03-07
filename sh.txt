@@ -1,11 +1,11 @@
 #https://calebschoepp.com/blog/2021/how-to-setup-oh-my-posh-on-ubuntu/
 # eval "$(oh-my-posh --init --shell bash --config ~/.poshthemes/mt.omp.json)"
 
-install vim-plug
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+# install vim-plug
+# curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 #
 #mkdir nvim
-cp -r /root/.config/nvim/* /root/tn/personal/my-vim-config/nvim/
+# cp -r /root/.config/nvim/* /root/tn/personal/my-vim-config/nvim/
 
 #mkdir lvim
 #cp -r /root/.config/lvim/* /root/tn/my-vim-config/lvim/
@@ -14,10 +14,7 @@ cp -r /root/.config/nvim/* /root/tn/personal/my-vim-config/nvim/
 #cp -r lvim /root/.config/lvim
 #cp -r nvim /root/.config/nvim
 
-# install python and pip
-#apt-get install software-properties-common
-#add-apt-repository ppa:deadsnakes/ppa
-#apt install python3-pip
+
 
 # install nodejs and npm
 #apt-get update
