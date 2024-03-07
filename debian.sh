@@ -1,8 +1,12 @@
+# sudo apt-get update
+# sudo apt-get install git 
+# git clone https://github.com/jirapast/my-vim-config.git
+
+#############################################################
+
 sudo apt-get update
-
-sudo apt-get install git wget unzip curl tree zsh vim tmux
-
-git clone https://github.com/jirapast/my-vim-config.git
+sudo apt-get install git 
+sudo apt-get install unzip curl tree zsh vim tmux wget
 
 cp my-vim-config/.zshrc $HOME/.zshrc
 cp my-vim-config/.vimrc $HOME/.vimrc
