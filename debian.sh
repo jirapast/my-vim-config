@@ -6,7 +6,7 @@
 
 sudo apt-get update
 sudo apt-get install git 
-sudo apt-get install unzip curl tree zsh vim tmux wget
+sudo apt-get install unzip curl tree zsh vim tmux wget gh
 
 cp .zshrc $HOME/.zshrc
 cp .vimrc $HOME/.vimrc
