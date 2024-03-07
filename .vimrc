@@ -1,5 +1,6 @@
 call plug#begin()
   Plug 'preservim/nerdtree'
+  Plug 'tribela/vim-transparent'
 call plug#end()
 
 
@@ -79,6 +80,10 @@ set undofile
 set undodir     =$HOME/.vim/files/undo/
 set viminfo     ='100,n$HOME/.vim/files/info/viminfo
 
+set textwidth=0
+set ttimeout
+set timeoutlen=1000
+set ttimeoutlen=0
 
 " (my) open file tree
 "inoremap <Space>e <Esc>:Lex<cr>:vertical resize 30<cr>
@@ -86,4 +91,20 @@ set viminfo     ='100,n$HOME/.vim/files/info/viminfo
 
 
 nmap <Space>e :NERDTreeToggle<CR>
+
+
+
+" highlight current line "
+set cursorline
+:highlight Cursorline cterm=bold ctermbg=black
+
+" enable highlight search pattern "
+set hlsearch
+
+" enable smartcase search sensitivity "
+set ignorecase
+set smartcase
+
+" show the matching part of pairs [] {} and () "
+set showmatch
 

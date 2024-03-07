@@ -1,19 +1,14 @@
 # zoxide (z)
 # https://github.com/ajeetdsouza/zoxide?tab=readme-ov-file
 curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | zsh
-
+export PATH="/home/tn/.local/bin:$PATH"
 eval "$(zoxide init zsh)"
 echo 'eval "$(zoxide init zsh)"' >> ~/.zshrc
-echo PATH=" /home/tn/.local/bin:$PATH"
-
 z -h
 
 
 # eza
 # https://github.com/eza-community/eza
-
-sudo apt-get install fzf
-
 sudo apt update
 sudo apt install -y gpg
 
@@ -26,3 +21,7 @@ sudo apt update
 sudo apt install -y eza
 
 eza -l
+
+
+
+#sudo apt-get install fzf
