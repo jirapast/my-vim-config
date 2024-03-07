@@ -91,3 +91,32 @@ set ttimeoutlen=0
 
 nmap <Space>e :NERDTreeToggle<CR>
 
+
+
+" highlight current line "
+set cursorline
+:highlight Cursorline cterm=bold ctermbg=black
+
+" enable highlight search pattern "
+set hlsearch
+
+" enable smartcase search sensitivity "
+set ignorecase
+set smartcase
+
+" show the matching part of pairs [] {} and () "
+set showmatch
+
+" remove trailing whitespace from Python files"
+autocmd BufWritePre *.py :%s/\s\+$//e
+
+" enable color themes "
+if !has('gui_running')
+        set t_Co=256
+endif
+" enable true colors support "
+set termguicolors
+" Vim colorscheme "
+
+colorscheme onedark
+
