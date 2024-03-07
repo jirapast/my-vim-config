@@ -1,0 +1,4 @@
+https://github.com/ajeetdsouza/zoxide?tab=readme-ov-file
+curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | bash
+eval "$(zoxide init zsh)"
+

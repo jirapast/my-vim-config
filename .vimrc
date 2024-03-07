@@ -23,6 +23,7 @@ let &t_EI = "\e[2 q"
 "set guicursor=i:ver25-iCursor
 
 set number
+set paste
 set nohlsearch
 set autoindent             " Indent according to previous line.
 set expandtab              " Use spaces instead of tabs.
