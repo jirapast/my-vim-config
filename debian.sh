@@ -28,6 +28,12 @@ oh-my-posh get shell
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
+mkdir $HOME/.vim/files
+
+mkdir $HOME/.vim/files/backup
+mkdir $HOME/.vim/files/info
+mkdir $HOME/.vim/files/undo
+mkdir $HOME/.vim/files/swap
 
 ### final step ###
 
