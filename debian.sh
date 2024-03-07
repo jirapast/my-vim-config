@@ -27,9 +27,10 @@ oh-my-posh get shell
 
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+ 
+# After install the vim-plug, it is neccessary to command ":PlugInstall" in Vim to start initializing the Vim-plug  
 
 mkdir $HOME/.vim/files
-
 mkdir $HOME/.vim/files/backup
 mkdir $HOME/.vim/files/info
 mkdir $HOME/.vim/files/undo
