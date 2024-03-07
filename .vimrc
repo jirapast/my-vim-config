@@ -79,6 +79,10 @@ set undofile
 set undodir     =$HOME/.vim/files/undo/
 set viminfo     ='100,n$HOME/.vim/files/info/viminfo
 
+set textwidth=0
+set ttimeout
+set timeoutlen=1000
+set ttimeoutlen=0
 
 " (my) open file tree
 "inoremap <Space>e <Esc>:Lex<cr>:vertical resize 30<cr>
