@@ -1,5 +1,7 @@
 call plug#begin()
-  Plug 'preservim/nerdtree'
+    Plug 'flazz/vim-colorschemes'
+    Plug 'preservim/nerdtree'
+    Plug 'tribela/vim-transparent'
 call plug#end()
 
 
@@ -30,7 +32,7 @@ set expandtab              " Use spaces instead of tabs.
 set softtabstop =4         " Tab key indents by 4 spaces.
 set shiftwidth  =4         " >> indents by 4 spaces.
 set shiftround             " >> indents to next multiple of 'shiftwidth'.
-
+set sidescrolloff=999
 set backspace   =indent,eol,start  " Make backspace work as you would expect.
 set hidden                 " Switch between buffers without having to save first.
 set laststatus  =2         " Always show statusline.
@@ -90,12 +92,12 @@ set ttimeoutlen=0
 
 
 nmap <Space>e :NERDTreeToggle<CR>
-
+hi Directory guifg=#FF0000 ctermfg=red
 
 
 " highlight current line "
-set cursorline
-:highlight Cursorline cterm=bold ctermbg=black
+"set cursorline
+highlight Cursorline cterm=bold ctermbg=black
 
 " enable highlight search pattern "
 set hlsearch
@@ -106,17 +108,4 @@ set smartcase
 
 " show the matching part of pairs [] {} and () "
 set showmatch
-
-" remove trailing whitespace from Python files"
-autocmd BufWritePre *.py :%s/\s\+$//e
-
-" enable color themes "
-if !has('gui_running')
-        set t_Co=256
-endif
-" enable true colors support "
-set termguicolors
-" Vim colorscheme "
-
-colorscheme onedark
-
+colorscheme desert

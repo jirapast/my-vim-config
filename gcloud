@@ -1,4 +1,6 @@
-#!/bin/zsh
+#!/usr/bin/env bash
+
+set -e
 
 curl -O https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-467.0.0-linux-x86_64.tar.gz
 
