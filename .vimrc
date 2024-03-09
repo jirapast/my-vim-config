@@ -1,111 +1,215 @@
+
+" Start of .vimrc
+
 call plug#begin()
     Plug 'flazz/vim-colorschemes'
     Plug 'preservim/nerdtree'
     Plug 'tribela/vim-transparent'
+    Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'junegunn/fzf.vim'
 call plug#end()
 
+" Toggle NERDTree with <Space>e
+nmap <Space>e :NERDTreeToggle<CR>
 
 
-" A (not so) minimal vimrc.
-"
 
-" You wan Vim, not vi. When Vim finds a vimrc, 'nocompatible' is set anyway.
-" We set it explicitely to make our position clear!
+" vim-airline additional conf: Smarter tab line
+"let g:airline_statusline_ontop=1
+"let g:airline#extensions#bufferline#enabled = 1
+
+let g:airline#extensions#tabline#enabled=1
+
+let g:airline#extensions#tabline#left_sep=''
+let g:airline#extensions#tabline#left_alt_sep = '|'
+
+let g:airline#extensions#tabline#right_sep=''
+let g:airline#extensions#tabline#right_alt_sep = '|'
+
+let g:airline_powerline_fonts=1
+let g:airline_left_sep=''
+let g:airline_right_sep=''
+let g:airline_theme='onedark'
+
+set showtabline=2
+
+"let g:airline#extensions#tabline#formatter = 'default'
+
+
+" Put all temporary files under the same directory
+set backup
+set backupdir=$HOME/.vim/files/backup/
+set backupext=-vimbackup
+set directory=$HOME/.vim/files/swap//
+set updatecount=100
+set undofile
+set undodir=$HOME/.vim/files/undo/
+set viminfo='100,n$HOME/.vim/files/info/viminfo
+
+" Customize NERDTree directory highlighting
+hi Directory guifg=#FF0000 ctermfg=red
+
+" Set Vim to use 'nocompatible' mode
 set nocompatible
 
-filetype plugin indent on  " Load plugins according to detected filetype.
-syntax on                  " Enable syntax highlighting.
+" Enable filetype detection, plugin loading, and indentation
+filetype plugin indent on
 
-" (my) change cursor to vertical bar after press i or a
-"let mapleader = " "
-"let maplocalleader = " "
+" Enable syntax highlighting
+syntax on
 
+" Define terminal escape sequences for cursor shape changes
 let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
-"set guicursor=i:ver25-iCursor
 
+" Enable line numbers
 set number
+
+" Enable paste mode
 set paste
+
+" Disable search highlighting after a search
 set nohlsearch
-set autoindent             " Indent according to previous line.
-set expandtab              " Use spaces instead of tabs.
-set softtabstop =4         " Tab key indents by 4 spaces.
-set shiftwidth  =4         " >> indents by 4 spaces.
-set shiftround             " >> indents to next multiple of 'shiftwidth'.
+
+" Enable auto-indentation
+set autoindent
+
+" Use spaces for indentation
+set expandtab
+
+" Set the width of a tab to 4 spaces
+set tabstop=4
+
+" Set the number of spaces for each indentation level to 4
+set shiftwidth=4
+
+" Indent to next multiple of 'shiftwidth'
+set shiftround
+
+" Keep cursor 999 characters away from the screen edge
 set sidescrolloff=999
-set backspace   =indent,eol,start  " Make backspace work as you would expect.
-set hidden                 " Switch between buffers without having to save first.
-set laststatus  =2         " Always show statusline.
-set display     =lastline  " Show as much as possible of the last line.
 
-set showmode               " Show current mode in command-line.
-set showcmd                " Show already typed keys when more are expected.
+" Allow switching buffers without saving
+set hidden
 
-set incsearch              " Highlight while searching with / or ?.
-set hlsearch               " Keep matches highlighted.
+" Always show statusline
+set laststatus=2
 
-set ttyfast                " Faster redrawing.
-set lazyredraw             " Only redraw when necessary.
+" Show current mode in command-line
+"set showmode   " set this if you want to see things like -- INSERT --
+set noshowmode  " set this if you do not want to see things like -- INSERT --
 
-set splitbelow             " Open new windows below the current window.
-set splitright             " Open new windows right of the current window.
+" Show already typed keys when more are expected
+set showcmd
 
-"set cursorline             " Find the current line quickly.
-set wrapscan               " Searches wrap around end-of-file.
-set report      =0         " Always report changed lines.
-set synmaxcol   =200       " Only highlight the first 200 columns.
+" Highlight while searching
+set incsearch
+set hlsearch
+
+" Faster redrawing
+set ttyfast
+
+" Only redraw when necessary
+set lazyredraw
+
+" Open new windows below the current window
+set splitbelow
+
+" Open new windows right of the current window
+set splitright
 
 
-set list                   " Show non-printable characters.
-if has('multi_byte') && &encoding ==# 'utf-8'
-  let &listchars = 'tab:▸ ,extends:❯,precedes:❮,nbsp:±'
-else
-  let &listchars = 'tab:> ,extends:>,precedes:<,nbsp:.'
-endif
 
-" The fish shell is not very compatible to other shells and unexpectedly
-" breaks things that use 'shell'.
-if &shell =~# 'fish$'
-  set shell=/bin/bash
-endif
 
-" Put all temporary files under the same directory.
-" https://github.com/mhinz/vim-galore#temporary-files
-set backup
-set backupdir   =$HOME/.vim/files/backup/
-set backupext   =-vimbackup
-set backupskip  =
-set directory   =$HOME/.vim/files/swap//
-set updatecount =100
-set undofile
-set undodir     =$HOME/.vim/files/undo/
-set viminfo     ='100,n$HOME/.vim/files/info/viminfo
 
+" Set textwidth to 0
 set textwidth=0
+
+" Set timeout options
 set ttimeout
 set timeoutlen=1000
 set ttimeoutlen=0
 
-" (my) open file tree
-"inoremap <Space>e <Esc>:Lex<cr>:vertical resize 30<cr>
-"nnoremap <Space>e <Esc>:Lex<cr>:vertical resize 30<cr>
 
 
-nmap <Space>e :NERDTreeToggle<CR>
-hi Directory guifg=#FF0000 ctermfg=red
 
-
-" highlight current line "
-"set cursorline
+" Highlight current line
+set cursorline
 highlight Cursorline cterm=bold ctermbg=black
 
-" enable highlight search pattern "
-set hlsearch
-
-" enable smartcase search sensitivity "
+" Enable smartcase search sensitivity
 set ignorecase
 set smartcase
 
-" show the matching part of pairs [] {} and () "
+" Show the matching part of pairs [] {} and ()
 set showmatch
-colorscheme desert
+
+
+
+
+
+
+
+" Define listchars to display non-printable characters
+set list
+" Define listchars conditionally for multi-byte UTF-8 encoding
+if has('multi_byte') && &encoding ==# 'utf-8'
+  let &listchars = 'tab:▸ ,extends:❯,precedes:❮,nbsp:±'
+  endif
+  " set listchars=tab:>-,trail:~,extends:>,precedes:<
+  set listchars=tab:>-,trail:~,extends:>,precedes:<,space:.
+
+" Save file
+nnoremap <F2> :w<CR>
+
+" Save and quit
+nnoremap <F3> :wq<CR>
+
+"Remove all trailing whitespace by pressing F5
+nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
+
+" Map F6 to delete lines beginning with 'print('
+nnoremap <F6> :g/^print(/d<CR>
+
+" Toggle spell-checking on and off with F7
+nnoremap <F7> :set spell! spelllang=en<CR>
+
+" Navigate to next tab with F8
+nnoremap <F8> :bp<CR>
+
+" Navigate to previous tab with F9
+nnoremap <F9> :bn<CR>
+
+noremap <F10> :tabp<CR>
+noremap <F11> :tabn<CR>
+
+set statusline+=%#TabNumber#
+set statusline+=%{tabpagenr()}
+
+set laststatus=2
+
+" env to allow fzf to find hidden files
+let $FZF_DEFAULT_COMMAND = 'rg --hidden -l ""'
+#
+## sudo apt install ripgrep
+## fzf
+#
+## Removing Unused Imports
+#vim-smoothie
+#vim-ultisnips
+#
+## Optimizing Imports:
+#vim-autoformat
+#vim-better-whitespace
+#
+## Formatting Code:
+#vim-prettier
+#vim-jsbeautify
+#
+## Code Refactoring
+#vim-refactor
+#vim-projectionist
+#
+#vim-airline
