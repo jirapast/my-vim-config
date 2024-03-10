@@ -1,0 +1,92 @@
+" Plugin Management
+call plug#begin()
+    Plug 'flazz/vim-colorschemes'
+"    Plug 'preservim/nerdtree'
+    Plug 'tribela/vim-transparent'
+    Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'junegunn/fzf.vim'
+"    Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
+"    Plug 'airblade/vim-gitgutter'
+    Plug 'tpope/vim-fugitive'
+call plug#end()
+
+" Key Bindings
+nmap <Space>e :NERDTreeToggle<CR>
+nnoremap <F2> :w<CR>
+nnoremap <F3> :wq<CR>
+nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
+nnoremap <F6> :g/^print(/d<CR>
+nnoremap <F7> :set spell! spelllang=en<CR>
+nnoremap <F8> :bp<CR>
+nnoremap <F9> :bn<CR>
+"noremap <F10> :tabp<CR>
+"noremap <F11> :tabn<CR>
+
+" Appearance
+let g:airline#extensions#tabline#enabled=1
+let g:airline#extensions#tabline#left_sep=''
+let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline#extensions#tabline#right_sep=''
+let g:airline#extensions#tabline#right_alt_sep = '|'
+let g:airline_powerline_fonts=1
+let g:airline_left_sep=''
+let g:airline_right_sep=''
+let g:airline_theme='onedark'
+set showtabline=2
+set cursorline
+highlight Cursorline cterm=bold ctermbg=black
+
+" File Handling
+set backup
+set backupdir=$HOME/.vim/files/backup/
+set backupext=-vimbackup
+set directory=$HOME/.vim/files/swap//
+set updatecount=100
+set undofile
+set undodir=$HOME/.vim/files/undo/
+set viminfo='100,n$HOME/.vim/files/info/viminfo
+set hidden
+
+" Search and Navigation
+set incsearch
+set hlsearch
+set ignorecase
+set smartcase
+set showmatch
+
+" Other Settings
+set nocompatible
+filetype plugin indent on
+syntax on
+set number
+set paste
+set nohlsearch
+set autoindent
+set expandtab
+set tabstop=4
+set shiftwidth=4
+set shiftround
+set sidescrolloff=999
+set laststatus=2
+set ttyfast
+set lazyredraw
+set splitbelow
+set splitright
+set textwidth=0
+set ttimeout
+set timeoutlen=1000
+set ttimeoutlen=0
+set list
+if has('multi_byte') && &encoding ==# 'utf-8'
+  let &listchars = 'tab:▸ ,extends:❯,precedes:❮,nbsp:±'
+endif
+set listchars=tab:>-,trail:~,extends:>,precedes:<,space:.
+set statusline+=%#TabNumber#
+set statusline+=%{tabpagenr()}
+let $FZF_DEFAULT_COMMAND = 'rg --hidden -l ""'
+set modifiable
+set paste
+set nohlsearch
+
