@@ -9,6 +9,11 @@ call plug#begin()
     Plug 'vim-airline/vim-airline-themes'
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
+    "Plug.'prettier/vim-prettier',.{.'do':.'yarn.install.--frozen-lockfile.--production'.}
+    "Plug.'airblade/vim-gitgutter'
+    Plug.'tpope/vim-fugitive'
+    Plug.'dense-analysis/ale'
+    Plug.'preservim/nerdcommenter'
 call plug#end()
 
 " Toggle NERDTree with <Space>e
