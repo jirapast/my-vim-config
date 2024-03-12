@@ -1,25 +1,20 @@
 #!/usr/bin/env bash
 set -e
 
-sudo apt-get update
-sudo apt-get install git 
-git clone https://github.com/jirapast/my-vim-config.git
-cd my-vim-config
+#sudo apt-get update
+#sudo apt-get install git 
+#git clone https://github.com/jirapast/my-vim-config.git
+#cd my-vim-config
 
 #############################################################
 
-sudo apt-get update
-sudo apt-get install git 
 sudo apt-get install unzip curl tree zsh vim tmux wget gh ripgrep
-
-chsh -s /bin/zsh
+sudo apt-get update
 
 ### Vim ###
 
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
  
-
 mkdir $HOME/.vim/files
 mkdir $HOME/.vim/files/backup
 mkdir $HOME/.vim/files/info
@@ -27,9 +22,8 @@ mkdir $HOME/.vim/files/undo
 mkdir $HOME/.vim/files/swap
 
 # https://github.com/dense-analysis/ale
-mkdir -p ~/.vim/pack/git-plugins/start
-git clone --depth 1 https://github.com/dense-analysis/ale.git ~/.vim/pack/git-plugins/start/ale
-
+# mkdir -p ~/.vim/pack/git-plugins/start
+# git clone --depth 1 https://github.com/dense-analysis/ale.git ~/.vim/pack/git-plugins/start/ale
 
 # https://github.com/tpope/vim-surround
 # mkdir -p ~/.vim/pack/tpope/start
@@ -74,11 +68,12 @@ git clone --depth 1 https://github.com/dense-analysis/ale.git ~/.vim/pack/git-pl
 ######
 
 
-cp .zshrc $HOME/.zshrc
-cp .vimrc $HOME/.vimrc
+cp .zshrc ~/.zshrc
+cp .vimrc ~/.vimrc
 # cp .vimrc-clean $HOME/.vimrc
 
 source ~/.zshrc
+chsh -s /bin/zsh
 
 sudo apt-get update
 sudo apt-get upgrade
