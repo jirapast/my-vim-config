@@ -197,24 +197,6 @@ set laststatus=2
 
 " env to allow fzf to find hidden files
 let $FZF_DEFAULT_COMMAND = 'rg --hidden -l ""'
-#
-## sudo apt install ripgrep
-## fzf
-#
-## Removing Unused Imports
-#vim-smoothie
-#vim-ultisnips
-#
-## Optimizing Imports:
-#vim-autoformat
-#vim-better-whitespace
-#
-## Formatting Code:
-#vim-prettier
-#vim-jsbeautify
-#
-## Code Refactoring
-#vim-refactor
-#vim-projectionist
-#
-#vim-airline
+
+:set fillchars+=vert:\ "White space at the end
+
