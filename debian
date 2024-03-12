@@ -58,22 +58,33 @@ mkdir $HOME/.vim/files/swap
 
 
 ### Oh My Posh ###
-#mkdir $HOME/bin
-#export PATH="$HOME/bin:$PATH"
-#curl -s https://ohmyposh.dev/install.sh | bash -s -- -d $HOME/bin
-#oh-my-posh font install
-#oh-my-posh get shell
+mkdir ~/bin
+export PATH="$HOME/bin:$PATH"
+curl -s https://ohmyposh.dev/install.sh | bash -s -- -d $HOME/bin
+oh-my-posh font install
+oh-my-posh get shell
+
+cat << 'EOF' >> ~/.zshrc
+eval "$(oh-my-posh init zsh --config ~/themes/star.omp.json)"
+if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
+  eval "$(oh-my-posh init zsh)"
+fi
+EOF
 
 
-######
+##############################################################################
 
-
+rm ~/.zshrc
 cp .zshrc ~/.zshrc
+
+rm ~/.vimrc
 cp .vimrc ~/.vimrc
-# cp .vimrc-clean $HOME/.vimrc
 
 source ~/.zshrc
+
 chsh -s /bin/zsh
+
+##############################################################################
 
 sudo apt-get update
 sudo apt-get upgrade
@@ -81,3 +92,5 @@ sudo apt-get upgrade
 echo $PWD
 echo $HOME
 echo $SHELL
+
+echo "done!"
