@@ -96,11 +96,11 @@ export PATH="$HOME/.local/bin:$PATH"
 
 #export AZURE_DEVOPS_EXT_PAT=
 
-eval "$(oh-my-posh init zsh --config ~/themes/star.omp.json)"
+#eval "$(oh-my-posh init zsh --config ~/themes/star.omp.json)"
 
-if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
-  eval "$(oh-my-posh init zsh)"
-fi
+#if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
+  #eval "$(oh-my-posh init zsh)"
+#fi
 
 
 alias vi=vim
