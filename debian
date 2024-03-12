@@ -74,11 +74,17 @@ EOF
 
 ##############################################################################
 
-rm ~/.zshrc
-cp .zshrc ~/.zshrc
+if [ -e "filename" ]; then
+    rm -f $HOME/.zshrc
+else
+    cp .zshrc ~/.zshrc
+fi
 
-rm ~/.vimrc
-cp .vimrc ~/.vimrc
+if [ -e "filename" ]; then
+    rm -f $HOME/.vimrc
+else
+    cp .vimrc ~/.vimrc
+fi
 
 source ~/.zshrc
 
