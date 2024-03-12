@@ -3,3 +3,11 @@ export PATH="$HOME/bin:$PATH"
 curl -s https://ohmyposh.dev/install.sh | bash -s -- -d $HOME/bin
 oh-my-posh font install
 oh-my-posh get shell
+
+cat << 'EOF' >> ~/.zshrc
+eval "$(oh-my-posh init zsh --config ~/themes/star.omp.json)"
+
+if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
+  eval "$(oh-my-posh init zsh)"
+fi
+EOF
