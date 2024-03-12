@@ -1,0 +1,5 @@
+mkdir $HOME/bin
+export PATH="$HOME/bin:$PATH"
+curl -s https://ohmyposh.dev/install.sh | bash -s -- -d $HOME/bin
+oh-my-posh font install
+oh-my-posh get shell
