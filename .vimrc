@@ -198,5 +198,8 @@ set laststatus=2
 " env to allow fzf to find hidden files
 let $FZF_DEFAULT_COMMAND = 'rg --hidden -l ""'
 
-set fillchars+=vert:\ "White space at the end
+set fillchars+=vert:\ "White space at the end 
 
+set nocursorline
+set paste
+colorscheme murphy
