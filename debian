@@ -22,37 +22,37 @@ mkdir $HOME/.vim/files/undo
 mkdir $HOME/.vim/files/swap
 
 # https://github.com/dense-analysis/ale
-# mkdir -p ~/.vim/pack/git-plugins/start
-# git clone --depth 1 https://github.com/dense-analysis/ale.git ~/.vim/pack/git-plugins/start/ale
+mkdir -p ~/.vim/pack/git-plugins/start
+git clone --depth 1 https://github.com/dense-analysis/ale.git ~/.vim/pack/git-plugins/start/ale
 
 # https://github.com/tpope/vim-surround
-# mkdir -p ~/.vim/pack/tpope/start
-# cd ~/.vim/pack/tpope/start
-# git clone https://tpope.io/vim/surround.git
-# vim -u NONE -c "helptags surround/doc" -c q
+mkdir -p ~/.vim/pack/tpope/start
+cd ~/.vim/pack/tpope/start
+git clone https://tpope.io/vim/surround.git
+vim -u NONE -c "helptags surround/doc" -c q
 
 # https://github.com/tpope/vim-fugitive
-# mkdir -p ~/.vim/pack/tpope/start
-# cd ~/.vim/pack/tpope/start
-# git clone https://tpope.io/vim/fugitive.git
-# vim -u NONE -c "helptags fugitive/doc" -c q
+mkdir -p ~/.vim/pack/tpope/start
+cd ~/.vim/pack/tpope/start
+git clone https://tpope.io/vim/fugitive.git
+vim -u NONE -c "helptags fugitive/doc" -c q
 
 # https://github.com/tpope/vim-commentary
-# mkdir -p ~/.vim/pack/tpope/start
-# cd ~/.vim/pack/tpope/start
-# git clone https://tpope.io/vim/commentary.git
-# vim -u NONE -c "helptags commentary/doc" -c q
+mkdir -p ~/.vim/pack/tpope/start
+cd ~/.vim/pack/tpope/start
+git clone https://tpope.io/vim/commentary.git
+vim -u NONE -c "helptags commentary/doc" -c q
 
 # https://github.com/tpope/vim-sensible/blob/master/README.markdown
-# mkdir -p ~/.vim/pack/tpope/start
-# cd ~/.vim/pack/tpope/start
-# git clone https://tpope.io/vim/sensible.git
+mkdir -p ~/.vim/pack/tpope/start
+cd ~/.vim/pack/tpope/start
+git clone https://tpope.io/vim/sensible.git
 
 # https://github.com/airblade/vim-gitgutter
-# mkdir -p ~/.vim/pack/airblade/start
-# cd ~/.vim/pack/airblade/start
-# git clone https://github.com/airblade/vim-gitgutter.git
-# vim -u NONE -c "helptags vim-gitgutter/doc" -c q
+mkdir -p ~/.vim/pack/airblade/start
+cd ~/.vim/pack/airblade/start
+git clone https://github.com/airblade/vim-gitgutter.git
+vim -u NONE -c "helptags vim-gitgutter/doc" -c q
 
 # After install the vim-plug, it is neccessary to command ":PlugInstall" in Vim to start initializing the Vim-plug  
 
