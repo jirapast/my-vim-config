@@ -82,7 +82,7 @@ cp $HOME/my-vim-config/.zshrc ~/.zshrc
 
 source ~/.zshrc
 
-chsh -s /bin/zsh
+chsh -s $(which zsh)
 
 
 ##############################################################################
