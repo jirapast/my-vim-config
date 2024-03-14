@@ -15,6 +15,11 @@ source ~/.zshrc
 python --version
 python3 --version
 
+alias python=python3
+alias python3=python3
+
 pip --version
 pip3 --version
 
+alias pip=pip3
+alias pip3=pip3
