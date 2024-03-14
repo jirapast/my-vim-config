@@ -1,15 +1,19 @@
 #!/usr/bin/env bash
-
 set -e
 
 # zoxide (z)
 # https://github.com/ajeetdsouza/zoxide?tab=readme-ov-file
-curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | $SHELL
-
-eval "$(zoxide init zsh)"
-echo 'eval "$(zoxide init zsh)"' >> ~/.zshrc
+# Check if the shell is Bash or Zsh
+if [ "$(basename "$SHELL")" = "bash" ]; then
+    curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | bash
+    eval "$(zoxide init bash)"
+    echo 'eval "$(zoxide init bash)"' >> ~/.bashrc
+elif [ "$(basename "$SHELL")" = "zsh" ]; then
+    curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | zsh
+    eval "$(zoxide init zsh)"
+    echo 'eval "$(zoxide init zsh)"' >> ~/.zshrc
+fi
 echo PATH=" /home/tn/.local/bin:$PATH"
-
 z -h
 
 
