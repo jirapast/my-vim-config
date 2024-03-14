@@ -1,6 +1,26 @@
 #!/usr/bin/env bash
 set -e
 
+mkdir $HOME/bin
+export PATH="$HOME/bin:$PATH"
+curl -s https://ohmyposh.dev/install.sh | bash -s -- -d $HOME/bin
+oh-my-posh font install
+oh-my-posh get shell
+
+cat << 'EOF' >> ~/.zshrc
+eval "$(oh-my-posh init zsh --config ~/themes/star.omp.json)"
+
+if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
+  eval "$(oh-my-posh init zsh)"
+fi
+EOF
+
+chsh -s $(which zsh)
+source ~/.zshrc
+
+
+
+
 # zoxide (z)
 # https://github.com/ajeetdsouza/zoxide?tab=readme-ov-file
 # Check if the shell is Bash or Zsh
