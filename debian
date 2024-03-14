@@ -74,12 +74,11 @@ vim -u NONE -c "helptags vim-gitgutter/doc" -c q
 
 ##############################################################################
 
+rm -f $HOME/.vimrc
+cp $HOME/my-vim-config/.vimrc ~/.vimrc
 
 rm -f $HOME/.zshrc
-cp .zshrc ~/.zshrcfi
-
-rm -f $HOME/.vimrc
-cp .vimrc ~/.vimrc
+cp $HOME/my-vim-config/.zshrc ~/.zshrcfi
 
 source ~/.zshrc
 
