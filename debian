@@ -78,7 +78,7 @@ rm -f $HOME/.vimrc
 cp $HOME/my-vim-config/.vimrc ~/.vimrc
 
 rm -f $HOME/.zshrc
-cp $HOME/my-vim-config/.zshrc ~/.zshrcfi
+cp $HOME/my-vim-config/.zshrc ~/.zshrc
 
 source ~/.zshrc
 
