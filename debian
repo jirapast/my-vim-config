@@ -58,37 +58,33 @@ vim -u NONE -c "helptags vim-gitgutter/doc" -c q
 
 
 ### Oh My Posh ###
-mkdir ~/bin
-export PATH="$HOME/bin:$PATH"
-curl -s https://ohmyposh.dev/install.sh | bash -s -- -d $HOME/bin
-oh-my-posh font install
-oh-my-posh get shell
+#mkdir ~/bin
+#export PATH="$HOME/bin:$PATH"
+#curl -s https://ohmyposh.dev/install.sh | bash -s -- -d $HOME/bin
+#oh-my-posh font install
+#oh-my-posh get shell
 
-cat << 'EOF' >> ~/.zshrc
-eval "$(oh-my-posh init zsh --config ~/themes/star.omp.json)"
-if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
-  eval "$(oh-my-posh init zsh)"
-fi
-EOF
+#cat << 'EOF' >> ~/.zshrc
+#eval "$(oh-my-posh init zsh --config ~/themes/star.omp.json)"
+#if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
+  #eval "$(oh-my-posh init zsh)"
+#fi
+#EOF
 
 
 ##############################################################################
 
-if [ -e "filename" ]; then
-    rm -f $HOME/.zshrc
-else
-    cp .zshrc ~/.zshrc
-fi
 
-if [ -e "filename" ]; then
-    rm -f $HOME/.vimrc
-else
-    cp .vimrc ~/.vimrc
-fi
+rm -f $HOME/.zshrc
+cp .zshrc ~/.zshrcfi
+
+rm -f $HOME/.vimrc
+cp .vimrc ~/.vimrc
 
 source ~/.zshrc
 
 chsh -s /bin/zsh
+
 
 ##############################################################################
 
