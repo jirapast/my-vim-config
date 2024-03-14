@@ -7,3 +7,5 @@ go version
 # cobra
 go get -u github.com/spf13/cobra@latest
 # import "github.com/spf13/cobra"
+
+go install github.com/rhysd/actionlint/cmd/actionlint@latest
