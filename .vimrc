@@ -203,3 +203,4 @@ set fillchars+=vert:\ "White space at the end
 set nocursorline
 set paste
 colorscheme murphy
+set noswapfile
