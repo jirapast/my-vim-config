@@ -4,7 +4,7 @@ set -e
 
 # zoxide (z)
 # https://github.com/ajeetdsouza/zoxide?tab=readme-ov-file
-curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | zsh
+curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | $SHELL
 
 eval "$(zoxide init zsh)"
 echo 'eval "$(zoxide init zsh)"' >> ~/.zshrc
