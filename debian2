@@ -40,7 +40,7 @@ z -h
 # eza
 # https://github.com/eza-community/eza
 
-sudo apt-get install fzf
+sudo apt-get install -y fzf
 
 sudo apt update
 sudo apt install -y gpg
