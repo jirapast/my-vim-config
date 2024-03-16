@@ -71,6 +71,7 @@ let &t_EI = "\e[2 q"
 
 " Enable line numbers
 set number
+set relativenumber
 
 " Enable paste mode
 set paste
