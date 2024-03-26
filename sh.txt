@@ -35,3 +35,8 @@
 
 # install LunarVim
 # LV_BRANCH='release-1.3/neovim-0.9' bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.3/neovim-0.9/utils/installer/install.sh)
+
+
+wget https://github.com/env0/terratag/releases/download/v0.3.3/terratag_0.3.3_linux_amd64.tar.gz
+tar -xvf terratag_0.3.3_linux_amd64.tar.gz
+export PATH="$PATH:/home/tn/bin"
