@@ -89,24 +89,41 @@
 #
 #
 ####################################################
-export PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin
-# export PATH="$HOME/bin/nvim-linux64/bin:$PATH" 
-export PATH="$HOME/bin:$PATH"
+
+
+
+# Created by newuser for 5.9
+eval "$(zoxide init zsh)"
+eval "$(fzf --zsh)"
+eval "$(oh-my-posh init zsh --config ~/themes/star.omp.json)"
+
+if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
+  eval "$(oh-my-posh init zsh)"
+fi
+alias g=git
+alias e=eza
+alias h=history
+
+export PATH="/home/tn/google-cloud-sdk/bin:$PATH"
+
+# alias gcloud=./home/tn/google-cloud-sdk/bin/gcloud
+neofetch
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/tn/google-cloud-sdk/path.zsh.inc' ]; then . '/home/tn/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/tn/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/tn/google-cloud-sdk/completion.zsh.inc'; fi
+
+export PATH="/home/tn/pants-release_2.21.1:$PATH"
+export PATH="$HOME/.pyenv/bin:$PATH"
+export PATH="$HOME/pants:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 
-#export AZURE_DEVOPS_EXT_PAT=
-
-#eval "$(oh-my-posh init zsh --config ~/themes/star.omp.json)"
-
-#if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
-  #eval "$(oh-my-posh init zsh)"
-#fi
-
-
-alias vi=vim
-alias vim=vim
-
-
+eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
 
 
