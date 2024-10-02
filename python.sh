@@ -14,3 +14,4 @@ python3 --version
 pip --version
 pip3 --version
 
+sudo pacman -S --needed base-devel openssl zlib git curl
